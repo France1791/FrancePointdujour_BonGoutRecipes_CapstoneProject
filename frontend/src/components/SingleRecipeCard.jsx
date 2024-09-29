@@ -1,11 +1,64 @@
-import React from 'react';
 
-function SingleRecipeCard({ recipe }) {
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+
+function SingleRecipeCard() {
+  const {id} = useParams();
+  const navigate = useNavigate();
+  const [recipe, setRecipe] = React.useState(null);
+
+  React.useEffect(() => {
+    async function fetchRecipe() {
+      try {
+        const response = await fetch(`http://localhost:8080/recipes/${id}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setRecipe(data);
+      } catch (error) {
+        console.error('An error occurred while fetching the recipe:', error);
+      }
+
+    }
+    fetchRecipe();
+  }, [id]);
+  
+  const handleSave = () => {
+    navigate('/recCollection');
+  };
+
+  if (!recipe) {
+    console.error('No recipe data provided');
+    return <div>No recipe data available</div>;
+  }
+
   return (
     <div className="single-recipe-card">
       <h2>{recipe.name}</h2>
       <img src={recipe.imgUrl} alt={recipe.name} className="recipe-image" />
+      <p><strong>Category:</strong> {recipe.type}</p>
       <p>{recipe.description}</p>
+       <div className="recipe-details">
+        <p><strong>Cook Time:</strong> {recipe.cookingTime}</p>
+        <h6>Level: {recipe.difficultyLevel}</h6>
+      </div>
+      <div className="ingredients">
+        <h3>Ingredients:</h3>
+        <ul>
+          {recipe.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+          {recipe.instructions.map((step, index) => (
+            <li key={index}>{step}</li>
+          ))} 
+         </ol>
+       </div> 
       <div className="mt-8 flex justify-between">
         <button
           onClick={handleSave}
@@ -26,28 +79,10 @@ function SingleRecipeCard({ recipe }) {
           Report Issue
         </button>
       </div>
-      {/* <div className="recipe-details">
-        <p><strong>Cook Time:</strong> {recipe.cookTime}</p>
-        <p><strong>Servings:</strong> {recipe.servings}</p>
-      </div>
-      <div className="ingredients">
-        <h3>Ingredients:</h3>
-        <ul>
-          {recipe.ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="instructions">
-        <h3>Instructions:</h3>
-        <ol>
-          {recipe.instructions.map((step, index) => (
-            <li key={index}>{step}</li>
-          ))} */}
-        {/* </ol> */}
-      {/* </div> */}
+     
     </div>
   );
 }
+
 
 export default SingleRecipeCard;

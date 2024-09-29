@@ -23,9 +23,6 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                <FaFacebookF size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
                 <FaTwitter size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition duration-300">

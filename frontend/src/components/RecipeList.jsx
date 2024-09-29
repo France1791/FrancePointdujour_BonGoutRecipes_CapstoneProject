@@ -18,7 +18,7 @@ function RecipeList() {
     } fetchRecipes();
   } , []);
   const handleViewRecipe = (id) => {
-    navigate(`/SingleRecipeCard/${id}`);
+    navigate(`/recipe/${id}`);
   };
   return (
     <div className="container bg-green-100 mx-auto p-4 focus:ring-green-500">
