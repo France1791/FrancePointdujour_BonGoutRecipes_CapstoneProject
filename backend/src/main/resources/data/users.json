@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "username": "admin1",
+    "password": "password1",
+    "email": "admin1@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 1,
+        "role": "ROLE_ADMIN"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 2,
+    "username": "user1",
+    "password": "password2",
+    "email": "user1@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 3,
+    "username": "user2",
+    "password": "password3",
+    "email": "user2@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 4,
+    "username": "admin2",
+    "password": "password4",
+    "email": "admin2@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 1,
+        "role": "ROLE_ADMIN"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 5,
+    "username": "user3",
+    "password": "password5",
+    "email": "user3@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 6,
+    "username": "user4",
+    "password": "password6",
+    "email": "user4@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 7,
+    "username": "admin3",
+    "password": "password7",
+    "email": "admin3@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 1,
+        "role": "ROLE_ADMIN"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 8,
+    "username": "user5",
+    "password": "password8",
+    "email": "user5@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 9,
+    "username": "user6",
+    "password": "password9",
+    "email": "user6@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  },
+  {
+    "id": 10,
+    "username": "user7",
+    "password": "password10",
+    "email": "user7@example.com",
+    "enabled": true,
+    "roles": [
+      {
+        "id": 2,
+        "role": "ROLE_USER"
+      }
+    ],
+    "recipeCards": []
+  }
+]

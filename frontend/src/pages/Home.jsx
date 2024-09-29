@@ -2,34 +2,38 @@ import React from 'react'
 import SearchBar from '../components/SearchBar';
 import CategoryTiles from '../components/CategoryTiles';
 import FeaturedRecipes from '../components/FeaturedRecipes';
-// import RecipeList from '../components/RecipeList';
+import Videoslide from '../components/Videoslide';
+
 
 function Home() {
+  
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url(https://shorturl.at/XMJC0)"}}>
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Bon Gout Recipes</h1>
+    <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{backgroundImage:"url('https://shorturl.at/XMJC0')"}}>
+      <div className="flex-grow container mx-auto px-4 py-8">
+        <header className="flex items-center justify-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-800">Bon Gout Recipes</h1>
+        </header>
         
-        <section className="mb-12">
+         <section className="mb-12">
           <SearchBar className="max-w-2xl mx-auto" />
-        </section>
-
+        </section> 
+        
+    
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-700"> <FeaturedRecipes /></h2>
-         
+          <h2 className="text-2xl font-bold text-center">Dishes of the Week</h2>
+          <FeaturedRecipes />
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4 text-gray-700">Recipe Categories</h2>
+          <h2 className="text-2xl font-bold text-center">Recipe Categories</h2>
           <CategoryTiles />
         </section>
 
-        {/* Uncomment if you want to include RecipeList */}
-        {/* <section className="mt-12">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-700">All Recipes</h2>
-          <RecipeList />
-        </section> */}
-      </main>
+        <section className="py-12">
+        <h2 className="text-3xl font-bold text-center mb-8">Featured Videos</h2>
+        <Videoslide />
+      </section>
+      </div>
     </div>
   );
 }

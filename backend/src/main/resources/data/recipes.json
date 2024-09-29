@@ -1,0 +1,735 @@
+[
+  {
+    "id": 1,
+    "name": "Stuffed Bell Peppers",
+    "description": "A healthy, flavorful and wholesome nut-free meal perfect for dinner",
+    "type": "Nut-free",
+    "imgUrl": "http://example.com/vegan_salad.jpg",
+    "difficultyLevel": "Medium",
+    "cookingTime": "45 minutes",
+    "ingredients": "4 large bell peppers\n1 cup cooked quinoa\n1 can (14 oz) black beans, drained and rinsed\n1 cup corn kernels\n1/2 cup diced tomatoes\n1/4 cup chopped cilantro\n1 teaspoon cumin\n1 teaspoon chili powder\n1/2 teaspoon garlic powder\nSalt and pepper to taste\n1 cup shredded cheese (optional)",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 375°F (190°C).\nPrepare Peppers:\n\nCut the tops off the bell peppers and remove the seeds and membranes.\nPrepare Filling:\n\nIn a large bowl, combine the cooked quinoa, black beans, corn, diced tomatoes, cilantro, cumin, chili powder, garlic powder, salt, and pepper.\nStuff Peppers:\n\nDivide the filling among the bell peppers. Top with shredded cheese if desired.\nBake Peppers:\n\nPlace the stuffed bell peppers in a baking dish. Cover with foil and bake for 25-30 minutes.\nServe:\n\nRemove the foil and bake for an additional 5-10 minutes, or until the cheese is melted and bubbly. Serve hot.",
+    "nutrition": "Calories: 300-350\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 10-15 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 1,
+        "username": "admin1",
+        "password": "password1",
+        "email": "admin1@example.com",
+        "enabled": true,
+        "roles": [
+          {
+            "id": 1,
+            "name": "ROLE_USER"
+          },
+          {
+            "id": 2,
+            "name": "ROLE_ADMIN"
+          }
+        ],
+        "recipeCards": []
+    }
+  },
+  {
+    "id": 2,
+    "name": "Hearty Beef Spaghetti Bolognese",
+    "description": "Nothing more conforming than a bowl of meaty bol.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/QBIFY",
+    "difficultyLevel": "Medium",
+    "cookingTime": "1 hour",
+    "ingredients": "1 pound ground beef\n1 onion, chopped\n2 cloves garlic, minced\n1 carrot, diced\n1 celery stalk, diced\n1 can (14 oz) diced tomatoes\n1 can (6 oz) tomato paste\n1 cup beef broth\n1 teaspoon dried oregano\n1 teaspoon dried basil\n1/2 teaspoon red pepper flakes\nSalt and pepper to taste\n8 oz spaghetti\nFresh parsley for garnish (optional)",
+    "instructions": "Cook Beef:\n\nIn a large pot, cook the ground beef over medium heat until browned. Drain excess fat.\nSauté Vegetables:\n\nAdd the chopped onion, garlic, carrot, and celery to the pot. Cook until softened, about 5-7 minutes.\nAdd Tomatoes and Broth:\n\nStir in the diced tomatoes, tomato paste, beef broth, oregano, basil, red pepper flakes, salt, and pepper. Bring the mixture to a simmer.\nSimmer Sauce:\n\nReduce heat to low and let the sauce simmer for 30-45 minutes, stirring occasionally.\nCook Pasta:\n\nCook the spaghetti according to package instructions. Drain.\nServe:\n\nServe the spaghetti with the Bolognese sauce. Garnish with fresh parsley if desired.",
+    "nutrition": "Calories: 400-500\nProtein: 20-25 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 15-20 grams\nSaturated Fat: 5-10 grams\nCholesterol: 50-60 mg\nSodium: 600-800 mg",
+    "creator": {
+      "id": 2,
+        "username": "user1",
+        "password": "password2",
+        "email": "user1@example.com",
+        "enabled": true,
+        "roles": [
+          {
+            "id": 1,
+            "name": "ROLE_USER"
+          }
+        ],
+        "recipeCards": []
+    }
+  },
+  {
+    "id": 3,
+    "name": "Chicken Curry",
+    "description": "Spicy chicken curry with rice.",
+    "type": "regular",
+    "imgUrl": "http://example.com/chicken_curry.jpg",
+    "difficultyLevel": "Medium",
+    "cookingTime": "40 minutes",
+    "ingredients": "2 tablespoons vegetable oil\n 1 onion, finely chopped\n2 garlic cloves, minced\n1-inch piece of ginger, minced\n1-2 green chilies, chopped (adjust to taste)\n1 pound (450g) boneless chicken thighs or breasts, cut into bite-sized pieces\n1 can (14 oz) coconut milk\n2 tablespoons curry powder (or to taste)\n1 teaspoon ground cumin\n1 teaspoon turmeric\n1 teaspoon garam masala\nSalt to taste\nFresh cilantro for garnish (optional)",
+    "instructions": "Heat Oil:\n\nIn a large pan, heat the vegetable oil over medium heat.\nSauté Aromatics:\n\nAdd the chopped onion and sauté until translucent, about 5 minutes. Add the minced garlic, ginger, and green chilies, and cook for another 2-3 minutes.\nCook Chicken:\n\nAdd the chicken pieces to the pan. Cook until browned on all sides, about 5-7 minutes.\nAdd Spices:\n\nStir in the curry powder, cumin, turmeric, and salt. Cook for 1-2 minutes until fragrant.\nAdd Coconut Milk:\n\nPour in the coconut milk, stirring to combine. Bring the mixture to a simmer.\nSimmer:\n\nReduce heat to low and cover. Let it simmer for 20-25 minutes, until the chicken is cooked through and tender.\nFinish:\n\nStir in garam masala and adjust seasoning if necessary. Garnish with fresh cilantro.\nServe:\n\nServe hot with rice or naan.",
+    "nutrition": "Calories: 400-450\nProtein: 30-35 grams\nCarbohydrates: 8-10 grams\nFiber: 2-3 grams\nSugars: 2-4 grams\nFat: 30-35 grams\nSaturated Fat: 15-20 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 2,
+        "username": "user1",
+        "password": "password2",
+        "email": "user1@example.com",
+        "enabled": true,
+        "roles": [
+          {
+            "id": 1,
+            "name": "ROLE_USER"
+          }
+        ],
+        "recipeCards": []
+    }
+  },
+  {
+    "id": 4,
+    "name": "Vegan Burger",
+    "description": "Delicious vegan burger with plant-based patty.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/VtBkT",
+    "difficultyLevel": "Easy",
+    "cookingTime": "35 minutes",
+    "ingredients": "1 can (15 oz) black beans, drained and rinsed\n1/2 cup cooked quinoa\n1/2 cup breadcrumbs\n1/4 cup chopped onion\n1/4 cup chopped bell pepper\n1/4 cup chopped mushrooms\n1/4 cup chopped fresh parsley\n1 teaspoon garlic powder\n1 teaspoon onion powder\n1 teaspoon smoked paprika\n1/2 teaspoon salt\n1/4 teaspoon black pepper\n1 tablespoon olive oil\n4 burger buns\nLettuce, tomato, and other toppings of choice",
+    "instructions": "Mash Beans:\n\nIn a large bowl, mash the black beans with a fork or potato masher.\nAdd Ingredients:\n\nAdd the quinoa, breadcrumbs, onion, bell pepper, mushrooms, parsley, garlic powder, onion powder, smoked paprika, salt, and pepper. Mix until well combined.\nForm Patties:\n\nDivide the mixture into 4 equal portions. Shape each portion into a patty.\nCook Patties:\n\nHeat the olive oil in a large skillet over medium heat. Add the patties and cook until browned on both sides, about 4-5 minutes per side.\nAssemble Burgers:\n\nToast the burger buns. Place a patty on the bottom half of each bun. Top with lettuce, tomato, and other toppings of choice. Cover with the top half of the bun.\nServe:\n\nServe hot with fries or a side salad.",
+    "nutrition": "Calories: 350-400\nProtein: 15-20 grams\nCarbohydrates: 50-60 grams\nFiber: 10-15 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 4,
+        "username": "admin2",
+        "password": "password4",
+        "email": "admin2@example.com",
+      "enabled": true,
+        "roles": [
+            {
+            "id": 1,
+            "name": "ROLE_ADMIN"
+            }
+        ],
+        "recipeCards": []
+    }
+  },
+  {
+    "id": 5,
+    "name": "Grilled Salmon",
+    "description": "Grilled salmon with lemon and herbs.",
+    "type": "regular",
+    "imgUrl": "http://example.com/grilled_salmon.jpg",
+    "difficultyLevel": "Easy",
+    "cookingTime": "20 minutes",
+    "ingredients": "4 salmon fillets\n2 tablespoons olive oil\n1 tablespoon lemon juice\n1 teaspoon lemon zest\n1 teaspoon garlic powder\n1 teaspoon dried oregano\n1 teaspoon dried basil\nSalt and pepper to taste\nLemon wedges for serving\nFresh herbs for garnish (optional)",
+    "instructions": "Preheat Grill:\n\nPreheat the grill to medium-high heat.\nSeason Salmon:\n\nIn a small bowl, combine the olive oil, lemon juice, lemon zest, garlic powder, oregano, basil, salt, and pepper. Brush the mixture over the salmon fillets.\nGrill Salmon:\n\nPlace the salmon fillets on the grill, skin side down. Grill for 4-5 minutes per side, or until the salmon is cooked through and flakes easily with a fork.\nServe:\n\nRemove the salmon from the grill and serve hot with lemon wedges and fresh herbs if desired.",
+    "nutrition": "Calories: 300-350\nProtein: 25-30 grams\nCarbohydrates: 0 grams\nFiber: 0 grams\nSugars: 0 grams\nFat: 20-25 grams\nSaturated Fat: 3-4 grams\nCholesterol: 70-80 mg\nSodium: 400-500 mg",
+
+    "creator": {
+      "id": 5,
+        "username": "user3",
+        "password": "password5",
+        "email": "user3@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 6,
+    "name": "Vegan Tacos",
+    "description": "Tasty vegan tacos with beans and vegetables.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/hbXJa",
+    "difficultyLevel": "Easy",
+    "cookingTime": "30 minutes",
+    "ingredients": "1 can (15 oz) black beans, drained and rinsed\n1 cup corn kernels\n1 bell pepper, diced\n1 onion, diced\n1 teaspoon chili powder\n1 teaspoon cumin\n1/2 teaspoon paprika\n1/2 teaspoon garlic powder\n1/2 teaspoon onion powder\nSalt and pepper to taste\n8 small tortillas\nToppings: avocado, salsa, cilantro, lime wedges",
+    "instructions": "Prepare Filling:\n\nIn a large skillet, heat some oil over medium heat. Add the diced onion and bell pepper. Cook until softened, about 5 minutes.\nAdd Beans and Corn:\n\nStir in the black beans and corn. Add the chili powder, cumin, paprika, garlic powder, onion powder, salt, and pepper. Cook for another 5 minutes.\nWarm Tortillas:\n\nHeat the tortillas in a dry skillet or microwave until warm and pliable.\nAssemble Tacos:\n\nSpoon the bean and vegetable mixture onto each tortilla. Top with avocado, salsa, cilantro, and a squeeze of lime juice.\nServe:\n\nServe hot with additional toppings as desired.",
+    "nutrition": "Calories: 200-250\nProtein: 5-10 grams\nCarbohydrates: 30-40 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 5-10 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 300-400 mg",
+    "creator": {
+      "id": 6,
+        "username": "user2",
+        "password": "password3",
+        "email": "user4@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 7,
+    "name": "Beef Stew",
+    "description": "Hearty beef stew with potatoes and carrots.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/A0VMz",
+    "difficultyLevel": "Medium",
+    "cookingTime": "2 hours",
+    "ingredients": "2 pounds beef chuck, cut into 1-inch cubes\nSalt and pepper to taste\n2 tablespoons olive oil\n1 onion, chopped\n2 cloves garlic, minced\n2 tablespoons tomato paste\n1 cup red wine\n4 cups beef broth\n2 bay leaves\n1 teaspoon dried thyme\n1 teaspoon dried rosemary\n4 carrots, peeled and cut into 1-inch pieces\n4 potatoes, peeled and cut into 1-inch pieces\n1/2 cup frozen peas\nFresh parsley for garnish (optional)",
+    "instructions": "Season Beef:\n\nSeason the beef cubes with salt and pepper.\nBrown Beef:\n\nIn a large Dutch oven, heat the olive oil over medium-high heat. Add the beef cubes and brown on all sides. Remove the beef and set aside.\nSauté Aromatics:\n\nAdd the chopped onion to the pot and sauté until softened, about 5 minutes. Add the minced garlic and cook for another minute.\nDeglaze Pot:\n\nStir in the tomato paste and cook for 1-2 minutes. Pour in the red wine and scrape up any browned bits from the bottom of the pot.\nSimmer Stew:\n\nReturn the beef to the pot. Add the beef broth, bay leaves, thyme, and rosemary. Bring the mixture to a simmer, then reduce heat to low. Cover and let the stew simmer for 1 hour.\nAdd Vegetables:\n\nAdd the carrots and potatoes to the pot. Cover and simmer for another 45 minutes, or until the vegetables are tender.\nFinish Stew:\n\nStir in the frozen peas and cook for another 5 minutes. Adjust seasoning as needed.\nServe:\n\nRemove the bay leaves and garnish with fresh parsley. Serve hot.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 20-30 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 20-30 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 800-1000 mg",
+    "creator": {
+      "id": 7,
+        "username": "user4",
+        "password": "password6",
+        "email": "admin3@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 1,
+          "role": "ROLE_ADMIN"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 8,
+    "name": "Vegan Pizza",
+    "description": "Delicious vegan pizza with plant-based cheese.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/pl9yt",
+    "difficultyLevel": "Medium",
+    "cookingTime": "1 hour",
+    "ingredients": "1 pound pizza dough\n1/2 cup marinara sauce\n1 cup vegan cheese\n1/2 cup sliced bell peppers\n1/2 cup sliced mushrooms\n1/4 cup sliced red onion\n1/4 cup sliced olives\n1/4 cup fresh basil leaves\nRed pepper flakes (optional)",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 450°F (230°C).\nPrepare Dough:\n\nRoll out the pizza dough on a floured surface to your desired thickness.\nAdd Toppings:\n\nSpread the marinara sauce over the dough. Sprinkle the vegan cheese over the sauce. Add the sliced bell peppers, mushrooms, red onion, and olives. Top with fresh basil leaves.\nBake Pizza:\n\nTransfer the pizza to a baking sheet or pizza stone. Bake for 15-20 minutes, or until the crust is golden and the cheese is melted.\nServe:\n\nRemove the pizza from the oven and let it cool slightly. Sprinkle with red pepper flakes if desired. Slice and serve hot.",
+    "nutrition": "Calories: 300-400\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 8,
+        "username": "admin3",
+        "password": "password7",
+        "email": "user5@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 9,
+    "name": "Chicken Alfredo",
+    "description": "A healthy chicken alfredo recipe. With all the rich and decadent flavors of the crave-worthy classic, but a fraction of the calories and fat.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/CllUW",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "8 oz fettuccine pasta\n1 tablespoon olive oil\n1 pound boneless, skinless chicken breasts, cut into bite-sized pieces\nSalt and pepper to taste\n2 cloves garlic, minced\n1 cup chicken broth\n1 cup heavy cream\n1/2 cup grated Parmesan cheese\n1/4 cup chopped fresh parsley\n1/4 cup chopped fresh basil",
+    "instructions": "Cook Pasta:\n\nCook the fettuccine pasta according to package instructions. Drain and set aside.\nSauté Chicken:\n\nIn a large skillet, heat the olive oil over medium heat. Add the chicken pieces, season with salt and pepper, and cook until browned and cooked through, about 5-7 minutes.\nMake Sauce:\n\nAdd the minced garlic to the skillet and cook for 1 minute. Pour in the chicken broth and heavy cream. Bring the mixture to a simmer.\nCombine Ingredients:\n\nStir in the cooked pasta, Parmesan cheese, parsley, and basil. Toss until the pasta is coated in the sauce.\nServe:\n\nServe hot with additional Parmesan cheese and fresh herbs for garnish.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 30-40 grams\nFiber: 2-3 grams\nSugars: 2-3 grams\nFat: 20-30 grams\nSaturated Fat: 10-15 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 9,
+        "username": "user5",
+        "password": "password8",
+        "email": "user6@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 10,
+    "name": "The best Spinach Smoothie",
+    "description": "Refreshing vegan smoothie with fruits.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/w8H5y",
+    "difficultyLevel": "Easy",
+    "cookingTime": "10 minutes",
+    "ingredients": "1 cup fresh spinach\n1/2 cup frozen pineapple chunks\n1/2 cup frozen mango chunks\n1/2 banana\n1 cup coconut water\n1 tablespoon chia seeds",
+    "instructions": "Blend Ingredients:\n\nIn a blender, combine the fresh spinach, frozen pineapple chunks, frozen mango chunks, banana, coconut water, and chia seeds.\nBlend until smooth.\nServe:\n\nPour the smoothie into a glass and serve cold.",
+    "nutrition": "Calories: 200-250\nProtein: 5-10 grams\nCarbohydrates: 40-50 grams\nFiber: 10-15 grams\nSugars: 20-25 grams\nFat: 5-10 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 100-200 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 11,
+    "name": "Roasted Vegetable Quinoa",
+    "description": "Nutritious quinoa mixed with roasted seasonal vegetables like zucchini, bell peppers, and tomatoes. This easy nut-free dish makes a great side or main course.",
+    "type": "Nut-free",
+    "imgUrl": "http://example.com/pork_chops.jpg",
+    "difficultyLevel": "Easy",
+    "cookingTime": "30 minutes",
+    "ingredients": "1 cup quinoa, rinsed\n2 cups vegetable broth\n1 zucchini, chopped\n1 red bell pepper, chopped\n1 yellow bell pepper, chopped\n1 pint cherry tomatoes\n2 tablespoons olive oil\n1 teaspoon garlic powder\n1 teaspoon dried oregano\nSalt and pepper to taste\nFresh parsley for garnish (optional)",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 400°F (200°C).\nCook Quinoa:\n\nIn a medium saucepan, bring the vegetable broth to a boil. Add the quinoa, reduce heat to low, cover, and simmer for 15 minutes, or until the quinoa is cooked and the liquid is absorbed.\nRoast Vegetables:\n\nPlace the chopped zucchini, bell peppers, and cherry tomatoes on a baking sheet. Drizzle with olive oil and sprinkle with garlic powder, oregano, salt, and pepper. Toss to coat.\nBake:\n\nRoast the vegetables in the oven for 20-25 minutes, or until tender and slightly browned.\nCombine Ingredients:\n\nIn a large bowl, combine the cooked quinoa and roasted vegetables. Toss to mix.\nServe:\n\nGarnish with fresh parsley and serve hot or at room temperature.",
+    "nutrition": "Calories: 300-350\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 12,
+    "name": "Lentil Soup",
+    "description": "This comforting dish is filling and packed with nutrients, without any nuts.",
+    "type": "Nut-free",
+    "imgUrl": "http://example.com/vegan_pancakes.jpg",
+    "difficultyLevel": "Easy",
+    "cookingTime": "1 hour",
+    "ingredients": "1 cup dried lentils\n1 onion, chopped\n2 carrots, chopped\n2 celery stalks, chopped\n2 cloves garlic, minced\n1 teaspoon cumin\n1 teaspoon paprika\n1/2 teaspoon turmeric\n1/2 teaspoon coriander\n1/4 teaspoon cayenne pepper\n4 cups vegetable broth\n1 can (14 oz) diced tomatoes\nSalt and pepper to taste\nFresh parsley for garnish (optional)",
+    "instructions": "Cook Lentils:\n\nIn a large pot, combine the lentils with 4 cups of water. Bring to a boil, then reduce heat to low and simmer for 20-25 minutes, or until the lentils are tender.\nSauté Vegetables:\n\nIn a separate pot, heat some oil over medium heat. Add the chopped onion, carrots, and celery. Cook until softened, about 5-7 minutes. Add the minced garlic and cook for another minute.\nAdd Spices:\n\nStir in the cumin, paprika, turmeric, coriander, and cayenne pepper. Cook for 1-2 minutes until fragrant.\nCombine Ingredients:\n\nAdd the cooked lentils, vegetable broth, and diced tomatoes to the pot. Season with salt and pepper. Bring the mixture to a simmer.\nSimmer Soup:\n\nReduce heat to low and let the soup simmer for 20-30 minutes, stirring occasionally.\nServe:\n\nGarnish with fresh parsley and serve hot.",
+    "nutrition": "Calories: 200-250\nProtein: 10-15 grams\nCarbohydrates: 30-40 grams\nFiber: 10-15 grams\nSugars: 5-10 grams\nFat: 5-10 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 13,
+    "name": "Shrimp Scampi",
+    "description": "shrimp pasta with hunks of crusty bread or dinner rolls for cleaning the plate is everything, and this version is extra fast and easy!.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/9F8rn",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "8 oz linguine pasta\n1 pound large shrimp, peeled and deveined\nSalt and pepper to taste\n2 tablespoons olive oil\n4 cloves garlic, minced\n1/2 teaspoon red pepper",
+    "instructions": "Cook Pasta:\n\nCook the linguine pasta according to package instructions. Drain and set aside.\nSeason Shrimp:\n\nSeason the shrimp with salt and pepper.\nSauté Shrimp:\n\nIn a large skillet, heat the olive oil over medium heat. Add the shrimp and cook until pink and opaque, about 2-3 minutes per side. Remove the shrimp and set aside.\nSauté Garlic:\n\nAdd the minced garlic and red pepper flakes to the skillet. Cook for 1-2 minutes until fragrant.\nCombine Ingredients:\n\nReturn the shrimp to the skillet. Add the cooked pasta and toss to combine.\nServe:\n\nServe hot with a sprinkle of fresh parsley and a squeeze of lemon juice.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 30-40 grams\nFiber: 2-3 grams\nSugars: 2-3 grams\nFat: 20-30 grams\nSaturated Fat: 10-15 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 14,
+    "name": "Vegan Brownies",
+    "description": "Rich and fudgy vegan brownies.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/AoP9n",
+    "difficultyLevel": "Easy",
+    "cookingTime": "40 minutes",
+    "ingredients": "1 cup all-purpose flour\n1/2 cup cocoa powder\n1/2 teaspoon baking powder\n1/2 teaspoon salt\n1/2 cup coconut oil, melted\n1 cup coconut sugar\n1/4 cup almond milk\n1 teaspoon vanilla extract\n1/2 cup vegan chocolate chips",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 350°F (180°C). Line an 8x8-inch baking pan with parchment paper.\nMix Dry Ingredients:\n\nIn a large bowl, whisk together the flour, cocoa powder, baking powder, and salt.\nCombine Wet Ingredients:\n\nIn a separate bowl, mix together the melted coconut oil, coconut sugar, almond milk, and vanilla extract.\nCombine Ingredients:\n\nAdd the wet ingredients to the dry ingredients and mix until well combined. Fold in the chocolate chips.\nBake Brownies:\n\nPour the batter into the prepared baking pan. Bake for 25-30 minutes, or until a toothpick inserted into the center comes out clean.\nCool and Serve:\n\nLet the brownies cool in the pan before slicing and serving.",
+    "nutrition": "Calories: 200-250\nProtein: 2-3 grams\nCarbohydrates: 30-40 grams\nFiber: 3-4 grams\nSugars: 15-20 grams\nFat: 10-15 grams\nSaturated Fat: 8-10 grams\nCholesterol: 0 mg\nSodium: 100-200 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 15,
+    "name": "Lamb Chops",
+    "description": "This succulent lamb chop is cooked to medium-rare perfection, with a seared, charred crust that locks in its flavors.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/2HTDY",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "4 lamb chops\nSalt and pepper to taste\n2 tablespoons olive oil\n2 cloves garlic, minced\n1 tablespoon fresh rosemary, chopped\n1 tablespoon fresh thyme, chopped\n1 tablespoon fresh parsley, chopped",
+    "instructions": "Season Lamb Chops:\n\nSeason the lamb chops with salt and pepper.\nSear Lamb Chops:\n\nIn a large skillet, heat the olive oil over medium-high heat. Add the lamb chops and sear for 3-4 minutes per side, or until browned and cooked to your desired doneness.\nAdd Aromatics:\n\nAdd the minced garlic, rosemary, thyme, and parsley to the skillet. Cook for another minute until fragrant.\nServe:\n\nRemove the lamb chops from the skillet and let them rest for a few minutes before serving. Garnish with fresh herbs and serve hot.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 0 grams\nFiber: 0 grams\nSugars: 0 grams\nFat: 20-30 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 10,
+      "username": "user7",
+      "password": "password10",
+      "email": "user7@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 16,
+    "name": "Spaghetti Carbonara",
+    "description": "A classic italian pasta dish with eggs, cheese and pancetta.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/YlFbp",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "8 oz spaghetti\n4 oz pancetta or bacon, diced\n2 cloves garlic, minced\n2 large eggs\n1/2 cup grated Parmesan cheese\n1/4 cup grated Pecorino Romano cheese\nSalt and pepper to taste\nFresh parsley for garnish (optional)",
+    "instructions": "Cook Pasta:\n\nCook the spaghetti according to package instructions. Drain and reserve 1 cup of pasta water.\nCook Pancetta:\n\nIn a large skillet, cook the diced pancetta over medium heat until crispy. Add the minced garlic and cook for another minute.\nCombine Ingredients:\n\nIn a bowl, whisk together the eggs, Parmesan cheese, and Pecorino Romano cheese. Season with salt and pepper.\nToss Pasta:\n\nAdd the cooked pasta to the skillet with the pancetta. Remove from heat and quickly stir in the egg and cheese mixture. Add a splash of pasta water if needed to create a creamy sauce.\nServe:\n\nGarnish with fresh parsley and serve hot with additional grated cheese.",
+    "nutrition": "Calories: 400-500\nProtein: 20-25 grams\nCarbohydrates: 30-40 grams\nFiber: 2-3 grams\nSugars: 2-3 grams\nFat: 20-25 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 17,
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken cutlets topped with marinara sauce and melted cheese.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/O6yce",
+    "difficultyLevel": "Medium",
+    "cookingTime": "45 minutes",
+    "ingredients": "4 boneless, skinless chicken breasts\nSalt and pepper to taste\n1 cup all-purpose flour\n2 large eggs, beaten\n1 cup breadcrumbs\n1/2 cup grated Parmesan cheese\n2 cups marinara sauce\n1 cup shredded mozzarella cheese\nFresh basil for garnish (optional)",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 375°F (190°C).\nPrepare Chicken:\n\nSeason the chicken breasts with salt and pepper. Dredge each breast in flour, then dip in beaten eggs, and coat with breadcrumbs mixed with Parmesan cheese.\nBake Chicken:\n\nPlace the breaded chicken breasts on a baking sheet. Bake for 20-25 minutes, or until cooked through.\nAdd Sauce and Cheese:\n\nRemove the chicken from the oven. Top each breast with marinara sauce and shredded mozzarella cheese.\nBroil Chicken:\n\nTurn on the broiler and place the chicken under the broiler for 2-3 minutes, or until the cheese is melted and bubbly.\nServe:\n\nGarnish with fresh basil and serve hot with pasta or a side salad.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 20-30 grams\nFiber: 2-3 grams\nSugars: 5-10 grams\nFat: 20-30 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 800-1000 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 18,
+    "name": "Beef Wellington",
+    "description": "A classic British dish consisting of beef tenderloin coated with pâté and duxelles, then wrapped in puff pastry and baked.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/ghzJN",
+    "difficultyLevel": "Hard",
+    "cookingTime": "2 hours",
+    "ingredients": "1 beef tenderloin\nSalt and pepper to taste\n2 tablespoons olive oil\n1/2 cup pâté\n1 cup mushroom duxelles\n1 sheet puff pastry\n1 egg, beaten\n",
+    "instructions": "Season Beef:\n\nSeason the beef tenderloin with salt and pepper.\nSear Beef:\n\nIn a large skillet, heat the olive oil over high heat. Sear the beef on all sides until browned.\nCoat Beef:\n\nSpread the pâté over the beef tenderloin. Top with mushroom duxelles.\nWrap in Pastry:\n\nRoll out the puff pastry on a floured surface. Place the beef in the center and wrap the pastry around it, sealing the edges.\nBake Beef:\n\nPlace the wrapped beef on a baking sheet. Brush with beaten egg. Bake in a preheated oven at 400°F (200°C) for 30-40 minutes, or until the pastry is golden and the beef is cooked to your desired doneness.\nServe:\n\nLet the beef rest for a few minutes before slicing. Serve hot with a side of vegetables or potatoes.",
+    "nutrition": "Calories: 600-700\nProtein: 40-50 grams\nCarbohydrates: 20-30 grams\nFiber: 2-3 grams\nSugars: 2-3 grams\nFat: 40-50 grams\nSaturated Fat: 15-20 grams\nCholesterol: 100-150 mg\nSodium: 800-1000 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 19,
+    "name": "Tiramisu",
+    "description": "A popular coffee-flavored Italian dessert made with ladyfingers and mascarpone cheese.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/igAYu",
+    "difficultyLevel": "Medium",
+    "cookingTime": "1 hour",
+    "ingredients": "1 cup heavy cream\n1 cup mascarpone cheese\n1/2 cup sugar\n1 teaspoon vanilla extract\n1 cup brewed espresso\n1 package ladyfingers\nCocoa powder for dusting",
+    "instructions": "Whip Cream:\n\nIn a large bowl, whip the heavy cream until stiff peaks form.\nMix Mascarpone:\n\nIn a separate bowl, mix the mascarpone cheese, sugar, and vanilla extract until smooth.\nCombine Ingredients:\n\nGently fold the whipped cream into the mascarpone mixture until well combined.\nAssemble Tiramisu:\n\nDip the ladyfingers in the brewed espresso and layer them in a dish. Spread a layer of the mascarpone mixture over the ladyfingers. Repeat the layers.\nChill Tiramisu:\n\nCover the dish and refrigerate for at least 4 hours, or overnight.\nServe:\n\nDust the top of the tiramisu with cocoa powder before serving.",
+    "nutrition": "Calories: 300-400\nProtein: 5-10 grams\nCarbohydrates: 20-30 grams\nFiber: 0 grams\nSugars: 15-20 grams\nFat: 20-30 grams\nSaturated Fat: 10-15 grams\nCholesterol: 50-100 mg\nSodium: 50-100 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 20,
+    "name": "Chicken Marsala",
+    "description": "Chicken breasts cooked in a Marsala wine sauce with mushrooms.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/ka8bM",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "4 boneless, skinless chicken breasts\nSalt and pepper to taste\n1/2 cup all-purpose flour\n2 tablespoons olive oil\n8 oz mushrooms, sliced\n2 cloves garlic, minced\n1 cup Marsala wine\n1 cup chicken broth\n2 tablespoons butter\nFresh parsley for garnish (optional)",
+    "instructions": "Season Chicken:\n\nSeason the chicken breasts with salt and pepper.\nDredge Chicken:\n\nDredge the chicken breasts in flour, shaking off any excess.\nSear Chicken:\n\nIn a large skillet, heat the olive oil over medium-high heat. Add the chicken breasts and cook until browned on both sides, about 5-7 minutes per side. Remove the chicken and set aside.\nSauté Mushrooms:\n\nIn the same skillet, add the sliced mushrooms and cook until browned, about 5 minutes. Add the minced garlic and cook for another minute.\nDeglaze Pan:\n\nPour in the Marsala wine and chicken broth. Bring the mixture to a simmer, scraping up any browned bits from the bottom of the pan.\nFinish Sauce:\n\nStir in the butter until melted. Return the chicken to the skillet and simmer for another 5 minutes.\nServe:\n\nGarnish with fresh parsley and serve hot with pasta or rice.",
+    "nutrition": "Calories: 400-500\nProtein: 30-40 grams\nCarbohydrates: 20-30 grams\nFiber: 2-3 grams\nSugars: 2-3 grams\nFat: 20-30 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 800-1000 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 21,
+    "name": "Vegan Lasagna",
+    "description": "A delicious vegan lasagna made with layers of pasta, vegetables, and plant-based cheese.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/QwK64",
+    "difficultyLevel": "Medium",
+    "cookingTime": "1 hour",
+    "ingredients": "1 box lasagna noodles\n1 jar marinara sauce\n1 zucchini, sliced\n1 yellow squash, sliced\n1 red bell pepper, sliced\n1 onion, sliced\n1 cup spinach\n1 cup vegan ricotta cheese\n1 cup vegan mozzarella cheese\n1/4 cup nutritional yeast\n1 teaspoon garlic powder\n1 teaspoon onion powder\n1 teaspoon dried basil\n1 teaspoon dried oregano\nSalt and pepper to taste",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 375°F (190°C).\nPrepare Vegetables:\n\nIn a large skillet, sauté the zucchini, yellow squash, bell pepper, and onion until softened. Add the spinach and cook until wilted.\nMix Cheese:\n\nIn a bowl, mix together the vegan ricotta cheese, vegan mozzarella cheese, nutritional yeast, garlic powder, onion powder, basil, oregano, salt, and pepper.\nAssemble Lasagna:\n\nIn a baking dish, layer marinara sauce, lasagna noodles, sautéed vegetables, and cheese mixture. Repeat the layers.\nBake Lasagna:\n\nCover the baking dish with foil and bake for 30 minutes. Remove the foil and bake for another 15 minutes, or until the cheese is melted and bubbly.\nServe:\n\nLet the lasagna cool slightly before slicing and serving.",
+    "nutrition": "Calories: 300-400\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 2,
+      "username": "user1",
+      "password": "password2",
+      "email": "user1@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 22,
+    "name": "Vegan Mac and Cheese",
+    "description": "A creamy and cheesy vegan macaroni and cheese made with plant-based ingredients.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/z40Mb",
+    "difficultyLevel": "Easy",
+    "cookingTime": "30 minutes",
+    "ingredients": "8 oz macaroni pasta\n1 cup cashews, soaked\n1 cup water\n1/4 cup nutritional yeast\n1 tablespoon lemon juice\n1 teaspoon garlic powder\n1 teaspoon onion powder\n1 teaspoon mustard powder\nSalt and pepper to taste",
+    "instructions": "Cook Pasta:\n\nCook the macaroni pasta according to package instructions. Drain and set aside.\nBlend Cheese Sauce:\n\nIn a blender, combine the soaked cashews, water, nutritional yeast, lemon juice, garlic powder, onion powder, mustard powder, salt, and pepper. Blend until smooth.\nCombine Ingredients:\n\nIn a large pot, mix the cooked pasta with the cheese sauce. Heat over low heat until warmed through.\nServe:\n\nGarnish with fresh herbs or breadcrumbs and serve hot.",
+    "nutrition": "Calories: 300-400\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 2,
+      "username": "user1",
+      "password": "password2",
+      "email": "user1@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 23,
+    "name": "Fish Tacos with Mango Salsa",
+    "description": " A fun, customizable meal perfect for any nut-free dinner.",
+    "type": "Nut-free",
+    "imgUrl": "https://shorturl.at/ghzJN",
+    "difficultyLevel": "Easy",
+    "cookingTime": "30 minutes",
+    "ingredients": "1 pound white fish fillets\n1 tablespoon olive oil\n1 teaspoon chili powder\n1 teaspoon cumin\n1/2 teaspoon garlic powder\n1/2 teaspoon onion powder\n1/2 teaspoon paprika\nSalt and pepper to taste\n8 small tortillas\nMango Salsa:\n1 mango, diced\n1/2 red onion, diced\n1/2 red bell pepper, diced\n1/4 cup chopped cilantro\n1 lime, juiced\nSalt and pepper to taste",
+    "instructions": "Prepare Fish:\n\nIn a small bowl, mix together the olive oil, chili powder, cumin, garlic powder, onion powder, paprika, salt, and pepper. Rub the spice mixture over the fish fillets.\nCook Fish:\n\nIn a large skillet, heat some oil over medium heat. Add the fish fillets and cook until opaque and flaky, about 3-4 minutes per side.\nMake Salsa:\n\nIn a bowl, combine the diced mango, red onion, red bell pepper, cilantro, lime juice, salt, and pepper.\nWarm Tortillas:\n\nHeat the tortillas in a dry skillet or microwave until warm and pliable.\nAssemble Tacos:\n\nPlace a fish fillet in each tortilla and top with mango salsa.\nServe:\n\nServe hot with additional toppings as desired.",
+    "nutrition": "Calories: 300-400\nProtein: 20-25 grams\nCarbohydrates: 30-40 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 50-100 mg\nSodium: 300-400 mg",
+    "creator": {
+      "id": 2,
+      "username": "user1",
+      "password": "password2",
+      "email": "user1@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 24,
+    "name": "Grilled lemon-herb chicken",
+    "description": " A simple, healthy, and flavorful dish, Served with a side of fresh vegetables.",
+    "type": "Nut-free",
+    "imgUrl": "https://shorturl.at/ghzJN",
+    "difficultyLevel": "Easy",
+    "cookingTime": "30 minutes",
+    "ingredients": "4 boneless, skinless chicken breasts\n2 tablespoons olive oil\n2 cloves garlic, minced\n1 lemon, juiced and zested\n1 tablespoon fresh thyme, chopped\n1 tablespoon fresh rosemary, chopped\nSalt and pepper to taste\n",
+    "instructions": "Marinate Chicken:\n\nIn a bowl, mix together the olive oil, garlic, lemon juice, lemon zest, thyme, rosemary, salt, and pepper. Add the chicken breasts and marinate for at least 30 minutes.\nGrill Chicken:\n\nPreheat the grill to medium-high heat. Grill the chicken breasts for 6-7 minutes per side, or until cooked through.\nServe:\n\nServe hot with a side of fresh vegetables or salad.",
+    "nutrition": "Calories: 300-400\nProtein: 30-40 grams\nCarbohydrates: 0 grams\nFiber: 0 grams\nSugars: 0 grams\nFat: 20-30 grams\nSaturated Fat: 7-10 grams\nCholesterol: 90-100 mg\nSodium: 400-600 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 25,
+    "name": "Rice and Peas",
+    "description": "A classic carribean dish made with coconut milk, kidney beans, and aromatic spices.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/Slptu",
+    "difficultyLevel": "Easy",
+    "cookingTime": "45 minutes",
+    "ingredients": "1 cup long-grain white rice\n1 can (14 oz) coconut milk\n1 can (14 oz) kidney beans, drained and rinsed\n1 onion, chopped\n2 cloves garlic, minced\n1 teaspoon thyme\n1 teaspoon allspice\n",
+    "instructions": "Cook Rice:\n\nIn a large pot, combine the rice, coconut milk, kidney beans, onion, garlic, thyme, and allspice. Bring to a boil, then reduce heat to low, cover, and simmer for 20-25 minutes, or until the rice is cooked and the liquid is absorbed.\nServe:\n\nServe hot as a side dish or main course.",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 26,
+    "name": "Vegan Pad Thai",
+    "description": "A delicious vegan version of the classic Thai noodle dish made with rice noodles, tofu, and vegetables.",
+    "type": "vegan",
+    "imgUrl": "https://shorturl.at/rk5s0",
+    "difficultyLevel": "Medium",
+    "cookingTime": "30 minutes",
+    "ingredients": "8 oz rice noodles\n1/4 cup soy sauce\n2 tablespoons maple syrup\n1 tablespoon rice vinegar\n1 tablespoon lime juice",
+    "instructions": "Cook Noodles:\n\nCook the rice noodles according to package instructions. Drain and set aside.\nMake Sauce:\n\nIn a bowl, whisk together the soy sauce, maple syrup, rice vinegar, and lime juice.\nSauté Tofu:\n\nIn a large skillet, sauté the tofu until browned and crispy.\nAdd Vegetables:\n\nAdd the vegetables to the skillet and cook until tender.\nCombine Ingredients:\n\nAdd the cooked noodles and sauce to the skillet. Toss to combine.\nServe:\n\nGarnish with chopped peanuts, cilantro, and lime wedges before serving.",
+    "nutrition": "Calories: 300-400\nProtein: 10-15 grams\nCarbohydrates: 40-50 grams\nFiber: 5-10 grams\nSugars: 5-10 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 500-600 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+  {
+    "id": 27,
+    "name": "Plantain Chips",
+    "description": "Crispy and flavorful plantain chips made with ripe plantains and spices.",
+    "type": "regular",
+    "imgUrl": "https://shorturl.at/22dRs",
+    "difficultyLevel": "Hard",
+    "cookingTime": "1 hour",
+    "ingredients": "2 ripe plantains\n2 tablespoons olive oil\n1 teaspoon paprika\n1/2 teaspoon garlic powder\n1/2 teaspoon onion powder\nSalt and pepper to taste",
+    "instructions": "Preheat Oven:\n\nPreheat the oven to 400°F (200°C).\nPrepare Plantains:\n\nPeel the plantains and slice them thinly.\nSeason Plantains:\n\nIn a bowl, mix together the olive oil, paprika, garlic powder, onion powder, salt, and pepper. Toss the plantain slices in the spice mixture until coated.\nBake Plantains:\n\nPlace the plantain slices on a baking sheet in a single layer. Bake for 20-25 minutes, flipping halfway through, or until crispy and golden brown.\nServe:\n\nServe the plantain chips hot as a snack or side dish.",
+    "nutrition": "Calories: 200-300\nProtein: 2-3 grams\nCarbohydrates: 30-40 grams\nFiber: 5-10 grams\nSugars: 10-15 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 200-300 mg",
+    "creator": {
+      "id": 3,
+      "username": "user2",
+      "password": "password3",
+      "email": "user2@example.com",
+      "enabled": true,
+      "roles": [
+        {
+          "id": 2,
+          "role": "ROLE_USER"
+        }
+      ],
+      "recipeCards": []
+    }
+  },
+    {
+        "id": 28,
+        "name": "Vegetable Stir Fry",
+        "description": "A quick and healthy mix of colorful vegetables in a savory sauce.",
+        "type": "vegan",
+        "imgUrl": "https://shorturl.at/iqVoO",
+        "difficultyLevel": "Easy",
+        "cookingTime": "20 minutes",
+        "ingredients": "2 tablespoons vegetable oil\n1 onion, sliced\n2 cloves garlic, minced\n1 bell pepper, sliced\n1 zucchini, sliced\n1 cup broccoli florets\n1 cup snap peas\n1/4 cup soy sauce\n1 tablespoon rice vinegar\n1 tablespoon maple syrup\n1 teaspoon sesame oil\n1 tablespoon cornstarch\n1/4 cup water",
+        "instructions": "Sauté Vegetables:\n\nIn a large skillet or wok, heat the vegetable oil over medium-high heat. Add the onion and garlic and cook until fragrant.\nAdd Vegetables:\n\nAdd the bell pepper, zucchini, broccoli, and snap peas to the skillet. Cook until the vegetables are tender-crisp.\nMake Sauce:\n\nIn a bowl, whisk together the soy sauce, rice vinegar, maple syrup, sesame oil, cornstarch, and water.\nCombine Ingredients:\n\nPour the sauce over the vegetables and toss to coat. Cook until the sauce thickens.\nServe:\n\nServe hot over rice or noodles.",
+        "nutrition": "Calories: 200-300\nProtein: 5-10 grams\nCarbohydrates: 20-30 grams\nFiber: 5-10 grams\nSugars: 10-15 grams\nFat: 10-15 grams\nSaturated Fat: 1-2 grams\nCholesterol: 0 mg\nSodium: 800-1000 mg",
+        "creator": {
+        "id": 3,
+          "username": "user2",
+          "password": "password3",
+          "email": "user2@example.com",
+          "enabled": true,
+          "roles": [
+            {
+              "id": 2,
+              "role": "ROLE_USER"
+            }
+          ],
+          "recipeCards": []
+        }
+    }
+
+]

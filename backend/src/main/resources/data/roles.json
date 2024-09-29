@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "role": "ROLE_ADMIN",
+    "users": []
+
+  },
+  {
+    "id": 2,
+    "role": "ROLE_USER",
+    "users": []
+  }
+]

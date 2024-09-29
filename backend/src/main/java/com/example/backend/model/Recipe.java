@@ -1,33 +1,37 @@
 package com.example.backend.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
 @Entity
 @Table(name = "recipe")
+
 public class Recipe {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String image_url;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private String description;
-    private String difficultyLevel; // easy, medium, hard
-    private String category;
+    private String type;// vegan,regular,nuts-free
+    private String imgUrl;
+    private String difficultyLevel;
+   private String cookingTime;
+    @Column(length = 2000) // Increase the length as needed
+    private String ingredients;
 
+    @Column(length = 2000) // Increase the length as needed
+    private String instructions;
 
-    @ElementCollection
-    private List<String> ingredients;
+    @Column(length = 2000) // Increase the length as needed
+    private String nutrition;
 
-    @Lob
-    private String steps;
-
-    @OneToMany(mappedBy = "recipe")
-    private List<Review> reviews;
+    @ManyToOne
+    @JoinColumn(name = "creator_id", nullable = false)
+    private User creator;
 }

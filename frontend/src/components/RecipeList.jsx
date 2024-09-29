@@ -1,43 +1,50 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
-function RecipeList({ category, recipes }) {
+function RecipeList() {
+  const[recipes, setRecipes] = useState([]);
+  const navigate = useNavigate();
+  useEffect(() => {
+    async function fetchRecipes() {
+      try {
+        const response = await fetch('http://localhost:8080/recipes');
+        const data = await response.json();
+        setRecipes(data);
+      }catch (error) {
+        console.error("An error occurred while fetching the recipes:", error);
+      }
+    } fetchRecipes();
+  } , []);
+  const handleViewRecipe = (id) => {
+    navigate(`/SingleRecipeCard/${id}`);
+  };
   return (
-    <div className="container mx-auto p-4 " style={{backgroundImage: "url(https://img.freepik.com/premium-photo/blank-old-aged-paper-with-copy-space-recipe-with-ingredients-wooden-spoon-table_290431-5679.jpg?w=740)"}}>
-    {/* Header */}
-    <div className="text-center py-4">
-      <h1 className="text-4xl font-bold">Check these Out</h1>
-    </div>
-
-    {/* Category Title */}
-    <div className="text-2xl font-bold mb-4">
-      {category} Recipes
-    </div>
-
-    {/* Recipe Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {/* {recipes.map((recipe) => (
-        <div key={recipe.id} className="border rounded-lg p-4 shadow-lg">
-          <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover rounded-t-lg" />
-          <div className="p-4">
-            <h2 className="text-xl font-bold">{recipe.title}</h2>
-            <p className="text-gray-600">{recipe.description}</p>
-            <div className="flex justify-between items-center mt-4">
-              <span>Time: {recipe.cookingTime}</span>
-              <span>Difficulty: {recipe.difficulty}</span>
+    <div className="container bg-green-100 mx-auto p-4 focus:ring-green-500">
+      {/* Header */}
+      <div className="p-4">
+        <h1 className="text-4xl font-bold text-center">Check these Out</h1>
+        <div className='p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 flex-col'>
+          {recipes.map((recipe) => (
+            <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl">
+              <img src={recipe.imgUrl} alt={recipe.name} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="font-bold text-xl mb-2">{recipe.name}</h3>
+                <p className="text-gray-600 mb-4">{recipe.description}</p>
+                <button
+                  className="bg-green-500 text-black px-4 py-2 rounded hover:bg-orange-300 transition duration-300"
+                  onClick={() => handleViewRecipe(recipe.id)}
+                >
+                  View Recipe
+                </button>
               </div>
-              <button className="mt-4 text-red-500">
-                <i className="fas fa-heart"></i> Add to Favorites
-              </button>
             </div>
-          </div>
-        ))} */}
+          ))}
+        </div>
       </div>
-      
-      {/* Pagination or Infinite Scrolling */}
-      {/* Placeholder for pagination or infinite scrolling */}
     </div>
   );
-};
-
-export default RecipeList;
-
+   }
+   export default RecipeList;
+  

@@ -1,64 +1,68 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 
 function FeaturedRecipes() {
-  const dishes = [
-    {
-      id: 1,
-      name: "Spaghetti Carbonara",
-      image: "https://shorturl.at/YlFbp",
-      description: "A classic Italian pasta dish with eggs, cheese, and pancetta.",
-      difficulty: "Medium"
-    },
-    {
-      id: 2,
-      name: "Grilled Salmon",
-      image: "https://shorturl.at/Slptu",
-      description: "Perfectly grilled salmon fillet with lemon and herbs.",
-      difficulty: "Easy"
-    },
-    {
-      id: 3,
-      name: "Beef Wellington",
-      image: "https://shorturl.at/22dRs",
-      description: "Tender beef wrapped in puff pastry with mushroom duxelles.",
-      difficulty: "Hard"
-    },
-    {
-      id: 4,
-      name: "Vegetable Stir-Fry",
-      image: "https://shorturl.at/iqVoO",
-      description: "A quick and healthy mix of colorful vegetables in a savory sauce.",
-      difficulty: "Easy"
-    }
-  ];
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-function DishCard({ dish }) {
-  const difficultyColor = {
-    Easy: 'bg-green-100 text-green-800',
-    Medium: 'bg-yellow-100 text-yellow-800',
-    Hard: 'bg-red-100 text-red-800'
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch('http://localhost:8080/recipes');
+        const data = await response.json();
+        setRecipes(getRandomRecipes(data, 4));
+      } catch (error) {
+        setError('An error occurred while fetching the recipes.');
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchRecipes();
+  }, []);
+
+  const getRandomRecipes = (recipes, count) => {
+    const shuffled = recipes.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const handleViewRecipe = (id) => {
+    // Implement the logic to view the recipe details
+    console.log(`View recipe with id: ${id}`);
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden  hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl">
-      <img src={dish.image} alt={dish.name} className="w-full h-48 object-cover" />
-      <div className="p-4">
-        <h3 className="font-bold text-xl mb-2">{dish.name}</h3>
-        <p className="text-gray-600 mb-4">{dish.description}</p>
-        <span className={`inline-block px-2 py-1 text-sm font-semibold rounded-full ${difficultyColor[dish.difficulty]}`}>
-          {dish.difficulty}
-        </span>
-      </div>
+    <div className="container mx-auto p-4">
+      {loading && <p>Loading...</p>}
+      {error && <p className="text-red-500">{error}</p>}
+      {!loading && !error && (
+        <div className="p-4">
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14">
+            {recipes.map((recipe) => (
+              <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl flex flex-col">
+                <img src={recipe.imgUrl} alt={recipe.name} className="w-full h-48 object-cover" />
+                <div className="p-4 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="font-bold text-xl mb-2">{recipe.name}</h3>
+                    <p className="text-gray-600 mb-4">{recipe.description}</p>
+                  </div>
+                  <button
+                    className="bg-green-500 text-black px-4 py-2 rounded hover:bg-orange-300 transition duration-300 w-2/4 mx-auto"
+                    onClick={() => handleViewRecipe(recipe.id)}
+                  >
+                    View Recipe
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
-}
-return (
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-  {dishes.map(dish => (
-    <DishCard key={dish.id} dish={dish} />
-  ))}
-</div>
-);
 }
 
 export default FeaturedRecipes;
