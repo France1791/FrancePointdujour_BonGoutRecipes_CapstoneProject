@@ -40,12 +40,13 @@ function UserCreate() {
   const handleReportIssue = (e) => {
     e.preventDefault();
     // Handle reporting an issue
-    console.log('Report issue');
+    navigate('/reportissue');
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <BackButton />
+    <div>
+    <BackButton />
+    <div className="container mx-auto p-4"> 
       <h1 className="text-4xl font-bold text-center mb-8">Create a Recipe</h1>
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
@@ -131,44 +132,23 @@ function UserCreate() {
           </label>
         </div>
         <div className="flex items-center justify-between">
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Go Back
-          </button>
-          <button
+        <button
             type="button"
             onClick={handleSave}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Save to Collection
           </button>
-        </div>
-      </form>
-
-      <h2 className="text-2xl font-bold text-center mb-8">Report an Issue</h2>
-      <form onSubmit={handleReportIssue} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="issue">
-            Issue Description
-          </label>
-          <textarea
-            name="issue"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Describe the issue"
-          />
-        </div>
-        <div className="flex items-center justify-between">
           <button
-            type="submit"
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+            onClick={handleReportIssue}
+            className="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Report Issue
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 }

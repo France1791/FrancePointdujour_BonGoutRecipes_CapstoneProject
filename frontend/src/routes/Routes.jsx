@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import UserCreate from '../components/UserCreate'
 import RecCollection from '../components/RecCollection'
 import RecipeList from '../components/RecipeList'
+import ReportIssue from '../components/ReportIssue'
 function RouteView() {
 
   const user = JSON.parse(localStorage.getItem('user'));
@@ -40,6 +41,7 @@ function RouteView() {
           <R path="/usercreate" element={<UserCreate />} />
           <R path="/reccollection" element={<RecCollection />} />
           <R path="/recipeList" element={<RecipeList />} />
+          <R path="/reportissue" element={<ReportIssue />} />
     </Routes>  
   )
 }

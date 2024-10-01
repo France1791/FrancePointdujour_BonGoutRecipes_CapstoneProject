@@ -23,11 +23,10 @@ function RecipeList() {
   };
   return (
     <div className="container bg-green-100 mx-auto p-4 focus:ring-green-500">
-      {/* Header */}
+      <BackButton />
       <div className="p-4">
         <h1 className="text-4xl font-bold text-center">Check these Out</h1>
         <div>
-          <BackButton />
           < SearchBar />
         </div>
         <div className='p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 flex-col'>
