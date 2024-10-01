@@ -17,6 +17,7 @@ import UserCreate from '../components/UserCreate'
 import RecCollection from '../components/RecCollection'
 import RecipeList from '../components/RecipeList'
 import ReportIssue from '../components/ReportIssue'
+import LoginLogout from '../components/LoginLogout'
 function RouteView() {
 
   const user = JSON.parse(localStorage.getItem('user'));
@@ -42,6 +43,7 @@ function RouteView() {
           <R path="/reccollection" element={<RecCollection />} />
           <R path="/recipeList" element={<RecipeList />} />
           <R path="/reportissue" element={<ReportIssue />} />
+          <R path="/loginlogout" element={<LoginLogout />} />
     </Routes>  
   )
 }
