@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VideoBackground from './VideoBackground';
+import BackButton from './BackButton';
 
 
 function UserProfile() {
@@ -48,6 +49,7 @@ function UserProfile() {
 
   return (
     <VideoBackground videoSrc="src/videos/3015488-hd_1920_1080_24fps.mp4">
+      <BackButton />
     <div className=" items-center justify-center">
       {/* <div className="bg-gray-400 p-8 rounded shadow-md w-full max-w-4xl text-center"> */}
         <input

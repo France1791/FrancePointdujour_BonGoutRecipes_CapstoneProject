@@ -1,12 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function FeaturedRecipes() {
+  const navigate = useNavigate();
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -30,8 +37,8 @@ function FeaturedRecipes() {
   };
 
   const handleViewRecipe = (id) => {
-    // Implement the logic to view the recipe details
-    console.log(`View recipe with id: ${id}`);
+    // to view the recipe details
+    navigate(`/recipe/${id}`);
   };
 
   return (
@@ -39,10 +46,10 @@ function FeaturedRecipes() {
       {loading && <p>Loading...</p>}
       {error && <p className="text-red-500">{error}</p>}
       {!loading && !error && (
-        <div className="p-4">
+        <div className="p-4" data-aos="fade-down">
           <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14">
-            {recipes.map((recipe) => (
-              <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl flex flex-col">
+            {recipes.map((recipe, index) => (
+              <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl flex flex-col" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
                 <img src={recipe.imgUrl} alt={recipe.name} className="w-full h-48 object-cover" />
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <div>

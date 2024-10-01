@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import BackButton from './BackButton';
 
 
 function RegisterPage() {
@@ -42,6 +43,8 @@ function RegisterPage() {
   };
 
   return (
+    <div>
+    <BackButton />
     <div className="min-h-screen flex items-center justify-center bg-green-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4">Register</h1>
@@ -112,6 +115,7 @@ function RegisterPage() {
         {error && <p className="text-red-500 text-xs italic mt-4">{error}</p>}
         {success && <p className="text-green-500 text-xs italic mt-4">Registration successful! Please <Link to="/login" className="text-green-600 hover:underline">login</Link>.</p>}
       </div>
+    </div>
     </div>
   );
 }

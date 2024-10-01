@@ -1,7 +1,8 @@
 import React from 'react'
+import SearchBar from './SearchBar';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {motion} from 'framer-motion';
+import BackButton from './BackButton';
 
 function RecipeList() {
   const[recipes, setRecipes] = useState([]);
@@ -25,6 +26,10 @@ function RecipeList() {
       {/* Header */}
       <div className="p-4">
         <h1 className="text-4xl font-bold text-center">Check these Out</h1>
+        <div>
+          <BackButton />
+          < SearchBar />
+        </div>
         <div className='p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 flex-col'>
           {recipes.map((recipe) => (
             <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:bg-slate-500 hover:scale-110 duration-300 hover:shadow-2xl">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackButton from './BackButton';
 
 function UserCreate() {
   const [option, setOption] = useState('manual');
@@ -44,6 +45,7 @@ function UserCreate() {
 
   return (
     <div className="container mx-auto p-4">
+      <BackButton />
       <h1 className="text-4xl font-bold text-center mb-8">Create a Recipe</h1>
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">

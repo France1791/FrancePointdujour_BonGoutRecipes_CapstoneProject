@@ -22,13 +22,13 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
+              <a href="https://x.com/jour_france" className="text-gray-400 hover:text-white transition duration-300" target='_blank'>
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
+              <a href="https://www.instagram.com/?next=%2F" className="text-gray-400 hover:text-white transition duration-300" target='_blank'>
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
+              <a href="https://linkedin.com/in/france-point-du-jour-5968b423b" className="text-gray-400 hover:text-white transition duration-300" target='_blank'>
                 <FaLinkedinIn size={20} />
               </a>
             </div>

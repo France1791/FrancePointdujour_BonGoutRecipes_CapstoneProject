@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import BackButton from './BackButton';
 
 function Contact() {
   return (
     <div className="bg-green-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <BackButton />
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 bg-green-600 p-8 text-white">

@@ -52,7 +52,9 @@ public class UserController {
         String password = loginData.get("password");
         User user = userRepository.findByUsername(username);
         if (user == null || !passwordEncoder.matches(password, user.getPassword())) {
-            return ResponseEntity.badRequest().body("Invalid username or password");
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("error", "Invalid username or password");
+            return ResponseEntity.badRequest().body(errorResponse);
         }
         Map<String, Object> response = new HashMap<>(); // Define response
         String token = "dummy-token"; // Generate or retrieve a real token

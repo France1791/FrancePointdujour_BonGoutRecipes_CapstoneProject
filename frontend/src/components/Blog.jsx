@@ -1,10 +1,12 @@
 import React from 'react'
 import { FaLeaf, FaAppleAlt, FaCarrot } from 'react-icons/fa'
 import VideoBackground from './VideoBackground'
+import BackButton from './BackButton'
 
 function Blog() {
   return (
     <VideoBackground videoSrc="src/videos/3015488-hd_1920_1080_24fps.mp4">
+      <BackButton />
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
          <div className="max-w-3xl bg-white bg-opacity-70 rounded-lg shadow-xl p-8 text-gray-800"> 
           <h1 className="text-4xl font-bold text-green-700 mb-6 text-center">Healthy Eating: Your Path to Wellness</h1>
