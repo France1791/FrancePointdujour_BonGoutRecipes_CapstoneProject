@@ -2,76 +2,133 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BackButton from './BackButton';
 
-function UserCreate() {
-  const [option, setOption] = useState('manual');
-  const [recipe, setRecipe] = useState({
+const UserCreate = () => {
+  const [formData, setFormData] = useState({
     name: '',
     description: '',
+    type: '',
+    difficultyLevel: '',
+    nutrition: '',
     ingredients: '',
     instructions: '',
-    image: null,
+    imgUrl: ''
   });
-  const navigate = useNavigate();
+  const [message, setMessage] = useState('');
 
-  const handleOptionChange = (e) => {
-    setOption(e.target.value);
-  };
-
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setRecipe({ ...recipe, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleImageChange = (e) => {
-    setRecipe({ ...recipe, image: e.target.files[0] });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Recipe submitted:', recipe);
+    try {
+      const response = await fetch('http://localhost:8080/recipes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setMessage('Recipe created successfully!');
+        setFormData({
+          name: '',
+          description: '',
+          type: '',
+          difficultyLevel: '',
+          nutrition: '',
+          ingredients: '',
+          instructions: '',
+          imgUrl: ''
+        });
+      } else {
+        setMessage('Failed to create the recipe.');
+      }
+    } catch (error) {
+      setMessage('An error occurred while creating the recipe.');
+    }
   };
 
-  const handleSave = () => {
-    // Handle saving the recipe to the collection
-    console.log('Recipe saved to collection:', recipe);
-  };
-
-  const handleReportIssue = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
-    // Handle reporting an issue
-    navigate('/reportissue');
+    // Implement search functionality here
   };
 
   return (
     <div>
     <BackButton />
-    <div className="container mx-auto p-4"> 
-      <h1 className="text-4xl font-bold text-center mb-8">Create a Recipe</h1>
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="flex items-center justify-center min-h-screen bg-green-100">
+      <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-2xl">
+      <h2 className="text-2xl font-bold mb-4">Create a Recipe</h2>
+      {message && <p className="mb-4 text-red-500">{message}</p>}
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
             Recipe Name
           </label>
           <input
             type="text"
+            id="name"
             name="name"
-            value={recipe.name}
-            onChange={handleInputChange}
+            value={formData.name}
+            onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter recipe name"
+            required
           />
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
-            Description
+            Description (Optional)
           </label>
           <textarea
+            id="description"
             name="description"
-            value={recipe.description}
-            onChange={handleInputChange}
+            value={formData.description}
+            onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter recipe description"
+            rows="3"
+          ></textarea>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="type">
+            Type
+          </label>
+          <input
+            type="text"
+            id="type"
+            name="type"
+            value={formData.type}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="difficultyLevel">
+            Difficulty Level (Optional)
+          </label>
+          <input
+            type="text"
+            id="difficultyLevel"
+            name="difficultyLevel"
+            value={formData.difficultyLevel}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nutrition">
+            Nutrition (Optional)
+          </label>
+          <input
+            type="text"
+            id="nutrition"
+            name="nutrition"
+            value={formData.nutrition}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
@@ -79,78 +136,79 @@ function UserCreate() {
             Ingredients
           </label>
           <textarea
+            id="ingredients"
             name="ingredients"
-            value={recipe.ingredients}
-            onChange={handleInputChange}
+            value={formData.ingredients}
+            onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter ingredients"
-          />
+            rows="5"
+            required
+          ></textarea>
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="instructions">
             Instructions
           </label>
           <textarea
+            id="instructions"
             name="instructions"
-            value={recipe.instructions}
-            onChange={handleInputChange}
+            value={formData.instructions}
+            onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter instructions"
-          />
+            rows="5"
+            required
+          ></textarea>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image">
-            Image (Optional)
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="imgUrl">
+            Image URL (Optional)
           </label>
           <input
-            type="file"
-            name="image"
-            onChange={handleImageChange}
+            type="text"
+            id="imgUrl"
+            name="imgUrl"
+            value={formData.imgUrl}
+            onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div className="mb-4">
-          <label className="mr-4">
-            <input
-              type="radio"
-              value="manual"
-              checked={option === 'manual'}
-              onChange={handleOptionChange}
-              className="mr-2"
-            />
-            Write Manually
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="google"
-              checked={option === 'google'}
-              onChange={handleOptionChange}
-              className="mr-2"
-            />
-            Search through Google
-          </label>
-        </div>
         <div className="flex items-center justify-between">
-        <button
-            type="button"
-            onClick={handleSave}
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Save to Collection
-          </button>
           <button
-            type="button"
-            onClick={handleReportIssue}
-            className="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Report Issue
+            Submit
           </button>
         </div>
       </form>
+      <div className="mt-6">
+        <h3 className="text-xl font-bold mb-4">Or Search Online</h3>
+        <form onSubmit={handleSearch}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="searchQuery">
+              Search Query
+            </label>
+            <input
+              type="text"
+              id="searchQuery"
+              name="searchQuery"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     </div>
     </div>
   );
-}
+};
 
 export default UserCreate;
