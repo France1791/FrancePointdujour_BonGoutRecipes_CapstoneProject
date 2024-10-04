@@ -9,11 +9,12 @@ function UserProfile() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/users', {
+        const response = await fetch('http://localhost:8080/api/checkuser', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -39,13 +40,13 @@ function UserProfile() {
 
   const username = localStorage.getItem('username');
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   return (
     <VideoBackground videoSrc="src/videos/3015488-hd_1920_1080_24fps.mp4">
@@ -72,7 +73,7 @@ function UserProfile() {
             Create
           </button>
           <button
-            onClick={() => navigate('/reccolection')}
+            onClick={() => navigate('/recCollection')}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-1/4"
           >
             My Collection

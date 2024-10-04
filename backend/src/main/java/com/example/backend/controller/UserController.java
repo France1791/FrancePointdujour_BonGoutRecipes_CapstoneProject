@@ -39,11 +39,15 @@ public class UserController {
         User savedUser = userRepository.save(user);
         return ResponseEntity.status(201).body(savedUser);
     }
-
+    //Store the creator/user email when registering(Local storage)
+    //fetch from checkuser endpoint using email to get creator id
+    //Use id to finish creating collection
+    //In collections map through the collections like the recipes page
+    //Do the same handlesubmit for the single recipe page
     @GetMapping("/checkuser")
-    public ResponseEntity<Boolean> checkUserExists(@RequestParam String email) {
-        boolean exists = userRepository.existsByEmail(email);
-        return ResponseEntity.ok(exists);
+    public ResponseEntity<User> checkUserExists(@RequestParam String username) {
+        User user = userRepository.findByUsername(username);
+        return ResponseEntity.ok(user);
     }
 
     @PostMapping("/login")

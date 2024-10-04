@@ -7,53 +7,65 @@ const UserCreate = () => {
     name: '',
     description: '',
     type: '',
+    imgUrl: '',
     difficultyLevel: '',
-    nutrition: '',
+    cookingTime: '',
     ingredients: '',
     instructions: '',
-    imgUrl: ''
+    nutrition: '',
+    // creatorId: parseInt(localStorage.getItem('userId'))
   });
-  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
+   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const userId = localStorage.getItem('userId'); // Ensure userId is retrieved correctly
+    if (!userId) {
+      setMessage('User ID is missing. Please log in.');
+      return;
+    }
     try {
-      const response = await fetch('http://localhost:8080/recipes', {
+      const response = await fetch(`http://localhost:8080/createcollection?creatorId=${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+      console.log('Form Data', formData);
       if (response.ok) {
         setMessage('Recipe created successfully!');
+        navigate('/recCollection', { state: { formData } });
         setFormData({
           name: '',
           description: '',
           type: '',
+          imgUrl: '',
           difficultyLevel: '',
-          nutrition: '',
+          cookingTime: '',
           ingredients: '',
           instructions: '',
-          imgUrl: ''
+          nutrition: '',
+          // creatorId: localStorage.getItem('userId')
         });
       } else {
-        setMessage('Failed to create the recipe.');
+        const errorData = await response.json();
+        console.error('Error Response:', errorData); // Log the error response from the server
+        setMessage('Failed to save recipe.');
       }
     } catch (error) {
+      console.error('Error creating recipe:', error);
       setMessage('An error occurred while creating the recipe.');
     }
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    // Implement search functionality here
   };
 
   return (
@@ -119,6 +131,20 @@ const UserCreate = () => {
           />
         </div>
         <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="type">
+            Cooking Time
+          </label>
+          <input
+            type="text"
+            id="cookingTime"
+            name="cookingTime"
+            value={formData.cookingTime}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+        <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nutrition">
             Nutrition (Optional)
           </label>
@@ -175,13 +201,13 @@ const UserCreate = () => {
         <div className="flex items-center justify-between">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Submit
+            Save
           </button>
         </div>
       </form>
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <h3 className="text-xl font-bold mb-4">Or Search Online</h3>
         <form onSubmit={handleSearch}>
           <div className="mb-4">
@@ -203,8 +229,8 @@ const UserCreate = () => {
               Search
             </button>
           </div>
-        </form>
-      </div>
+        </form> */}
+      {/* </div> */}
     </div>
     </div>
     </div>

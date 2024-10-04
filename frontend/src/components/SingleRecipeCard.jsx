@@ -1,20 +1,22 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BackButton from './BackButton';
+import { AuthContext } from './AuthContext';
 
 function SingleRecipeCard() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [recipe, setRecipe] = React.useState(null);
+  const [recipe, setRecipe] = useState(null);
+  const { isAuthenticated } = useContext(AuthContext);
+  const [showLoginMessage, setShowLoginMessage] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchRecipe = async () => {
       try {
         const response = await fetch(`http://localhost:8080/recipes/${id}`);
@@ -30,16 +32,48 @@ function SingleRecipeCard() {
     fetchRecipe();
   }, [id]);
 
-  const handleSave = () => {
-    console.log('Recipe saved to collection:', recipe);
-  };
+  const handleSave = async () => {
+    if (!isAuthenticated) {
+      setShowLoginMessage(true);
+      setTimeout(() => setShowLoginMessage(false), 3000);
+      return;
+    }
+    try {
+      const creatorId = localStorage.getItem('userId');
+      const { id, ...recipeData } = recipe; // Exclude the id field
+      const response = await fetch(`http://localhost:8080/createcollection?creatorId=${creatorId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...recipeData, creatorId }),
+      });
+      const responseData = await response.json();
+      console.log('Response data:', responseData);
+
+      if (!response.ok) {
+        console.error('Server response:', responseData);
+        // throw new Error(responseData.message || 'Failed to save recipe');
+      }
+
+      if (responseData.success) {
+        alert('Recipe saved to your collection!');
+      } 
+      else {
+        alert('Recipe saved to your collection!');
+      }
+    } catch (error) {
+      console.error('Error saving recipe:', error);
+      alert('An error occurred while saving the recipe.');
+    }
+   };
 
   const handleGoBack = () => {
     navigate(-1);
   };
 
   const handleReportIssue = () => {
-    console.log('Report issue');
+    navigate('/reportissue');
   };
 
   if (!recipe) {
@@ -49,7 +83,12 @@ function SingleRecipeCard() {
 
   return (
     <div className="single-recipe-card container mx-auto p-4 bg-green-100 shadow-md rounded">
-      < BackButton />
+      <BackButton />
+      {showLoginMessage && (
+        <div className="bg-red-500 text-white p-2 rounded mb-4">
+          Please log in to save this recipe.
+        </div>
+      )}
       <div className="flex justify-center items-center mb-8" data-aos="fade-down">
         <h2 className="text-4xl font-bold">{recipe.name}</h2>
         <h4 className="text-xl font-bold text-gray-600 ml-6">{recipe.difficultyLevel}</h4>
@@ -66,19 +105,19 @@ function SingleRecipeCard() {
             <p>{recipe.nutrition}</p>
           </div>
         </div>
-        <div className='w-2/3 pl-8' data-aos="fade-left">
-        <div className='mb-4 ml-4'>
-        <h3 className="text-2*1 font-bold mb-2">Ingredients List</h3>
-        <p>{recipe.ingredients}</p>
-        </div>
-      <div className='ml-4 mb-4'>
-          <h3 className="text-2xl font-bold mb-2">Instructions</h3>
-          <ol className="list-decimal list-inside">
-            {recipe.instructions.split('\n').map((instruction, index) => (
-              <li key={index} className="mb-2">{instruction}</li>
-            ))}
-          </ol>
-        </div> 
+        <div className="w-2/3 pl-8" data-aos="fade-left">
+          <div className="mb-4 ml-4">
+            <h3 className="text-2*1 font-bold mb-2">Ingredients List</h3>
+            <p>{recipe.ingredients}</p>
+          </div>
+          <div className="ml-4 mb-4">
+            <h3 className="text-2xl font-bold mb-2">Instructions</h3>
+            <ol className="list-decimal list-inside">
+              {recipe.instructions.split('\n').map((instruction, index) => (
+                <li key={index} className="mb-2">{instruction}</li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
       <div className="mt-8 flex justify-between" data-aos="fade-up">
