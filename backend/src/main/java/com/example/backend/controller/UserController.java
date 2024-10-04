@@ -1,13 +1,13 @@
 package com.example.backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Map; // Import Map
-import java.util.HashMap; // Import HashMap
+import java.util.Map;
+import java.util.HashMap;
 import com.example.backend.model.User;
 import com.example.backend.common.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -39,15 +39,17 @@ public class UserController {
         User savedUser = userRepository.save(user);
         return ResponseEntity.status(201).body(savedUser);
     }
-    //Store the creator/user email when registering(Local storage)
-    //fetch from checkuser endpoint using email to get creator id
-    //Use id to finish creating collection
-    //In collections map through the collections like the recipes page
-    //Do the same handlesubmit for the single recipe page
+
     @GetMapping("/checkuser")
-    public ResponseEntity<User> checkUserExists(@RequestParam String username) {
+    public ResponseEntity<Boolean> checkUser(@RequestParam String username) {
+        if (username == null || username.isEmpty()) {
+            return ResponseEntity.badRequest().body(false);
+        }
         User user = userRepository.findByUsername(username);
-        return ResponseEntity.ok(user);
+        if (user == null) {
+            return ResponseEntity.ok(false);
+        }
+        return ResponseEntity.ok(true);
     }
 
     @PostMapping("/login")
@@ -60,10 +62,16 @@ public class UserController {
             errorResponse.put("error", "Invalid username or password");
             return ResponseEntity.badRequest().body(errorResponse);
         }
-        Map<String, Object> response = new HashMap<>(); // Define response
+        Map<String, Object> response = new HashMap<>();
         String token = "dummy-token"; // Generate or retrieve a real token
         response.put("token", token);
         response.put("userData", user);
         return ResponseEntity.ok(response);
+    }
+}
+
+class BadRequestException extends RuntimeException {
+    public BadRequestException(String message) {
+        super(message);
     }
 }

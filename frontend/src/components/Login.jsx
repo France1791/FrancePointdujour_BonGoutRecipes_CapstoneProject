@@ -13,7 +13,6 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      console.log('Sending request with:', { username, password }); // Log the request payload
       const response = await fetch('http://localhost:8080/api/login', {
         method: 'POST',
         headers: {
@@ -21,23 +20,22 @@ function Login() {
         },
         body: JSON.stringify({ username, password }),
       });
-      
+
       if (response.status === 200) {
         const data = await response.json();
-        console.log('Login successful:', data);
         localStorage.setItem('username', data.userData.username);
         localStorage.setItem('userId', data.userData.id);
-        login(data.token, data.user);
+        login(data.token, data.userData);
         navigate('/userprofile');
         setMessage('Login successful!');
       } else {
-        setMessage('Login failed. Please check your credentials.');
+        const errorData = await response.json();
+        setMessage(errorData.error || 'Login failed. Please check your credentials.');
       }
     } catch (error) {
       setMessage('An error occurred during login.');
     }
   };
-
 
   return (
     <div>
@@ -51,7 +49,7 @@ function Login() {
           ) : (
             <form onSubmit={handleLogin}>
               <h2 className="text-2xl font-bold mb-4">Login</h2>
-              {message && <p className="mb-4 text-green-500">{message}</p>}
+              {message && <p className="mb-4 text-red-500">{message}</p>}
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"

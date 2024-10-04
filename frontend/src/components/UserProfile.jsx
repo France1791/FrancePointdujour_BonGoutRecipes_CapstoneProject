@@ -3,18 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import VideoBackground from './VideoBackground';
 import BackButton from './BackButton';
 
-
 function UserProfile() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  
+  const username = localStorage.getItem('username');
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/checkuser', {
+        const response = await fetch(`http://localhost:8080/api/checkuser?username=${username}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -36,29 +35,26 @@ function UserProfile() {
     };
 
     fetchUserData();
-  }, []);
+  }, [username]);
 
-  const username = localStorage.getItem('username');
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <VideoBackground videoSrc="src/videos/3015488-hd_1920_1080_24fps.mp4">
       <BackButton />
-    <div className=" items-center justify-center">
-      {/* <div className="bg-gray-400 p-8 rounded shadow-md w-full max-w-4xl text-center"> */}
+      <div className="items-center justify-center">
         <input
           type="text"
           placeholder="Search..."
           className="mb-4 p-2 border rounded w-full"
         />
-         <h1 className="text-2xl text-center text-white font-bold  mb-4">Welcome, {username}!</h1>
+        <h1 className="text-2xl text-center text-white font-bold mb-4">Welcome, {username}!</h1>
         <div className="mb-6 flex justify-around w-full">
           <button
             onClick={() => navigate('/recipelist')}
@@ -80,7 +76,6 @@ function UserProfile() {
           </button>
         </div>
       </div>
-    {/* </div> */}
     </VideoBackground>
   );
 }

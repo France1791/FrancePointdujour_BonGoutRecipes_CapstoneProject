@@ -41,7 +41,7 @@ function SearchBar() {
 
   const handleRecipeClick = (id) => { 
     const currentPath = location.pathname;
-    const newPath = `/SingleRecipeCard/${id}`;
+    const newPath = `/recipe/${id}`;
     if(currentPath === newPath) {
       navigate(newPath, { replace: true });
     }else {

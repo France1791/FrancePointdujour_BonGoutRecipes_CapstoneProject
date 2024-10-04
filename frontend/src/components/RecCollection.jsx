@@ -24,7 +24,7 @@ function RecCollection() {
   useEffect(() => {
     const fetchCollections = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/collections?userId=${userId}`, {
+        const response = await fetch(`http://localhost:8080/collections/${userId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
